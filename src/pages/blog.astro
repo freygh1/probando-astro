@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 const pageTitle = "Mi blog";
 ---
 
@@ -9,6 +11,14 @@ const pageTitle = "Mi blog";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <style>
+      .enlace{
+        font-size: 20px;
+      }
+      .rojo{
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <a href="/">Inicio</a>
@@ -19,7 +29,7 @@ const pageTitle = "Mi blog";
     <p>Este blog servira como testimonio de como ire mejorando en el tiempo con AstroJS</p>
 
     <h2>Mis posts:</h2>
-    <i><a href="/posts/post-1">Post 1</a></i>
+    <i><a class:list={['enlace', {rojo: true}]} href="/posts/post-1">Post 1</a></i>
     <i><a href="/posts/post-2">Post 2</a></i>
     <i><a href="/posts/post-3">Post 3</a></i>
   </body>
