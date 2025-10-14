@@ -1,8 +1,43 @@
 ---
 import "../styles/global.css";
-
+import Navigation from "../components/Navigation.astro";
 const pageTitle = "Inicio";
+
+import Footer from "../components/Footer.astro";
 ---
+
+<style>
+	body {
+		min-height: 200vh;
+	}
+
+	.padre {
+		width: 800px;
+		height: 800px;
+		position: relative;
+		background: #00000000;
+	}
+
+	.caja {
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		display: grid;
+		place-items: center;
+	}
+
+	.color1 {
+		background: #fefefe;
+		top: 150px;
+		left: 150px;
+		z-index: -1;
+	}
+
+	.color2 {
+		background: #e66a6a;
+		z-index: 1 ;
+	}
+</style>
 
 <html lang="en">
 	<head>
@@ -13,10 +48,15 @@ const pageTitle = "Inicio";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">{pageTitle}</a>
-		<a href="/about">Acerca de mi</a>
-		<a href="/blog">Mi blog</a>
+		<Navigation />
 
 		<h1>{pageTitle}: Mi Sitio Astro</h1>
+
+		<Footer />
+
+		<div class="padre">
+			<div class="caja color1">Color 1</div>
+			<div class="caja color2">Color 2</div>
+		</div>
 	</body>
 </html>

@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
 const pageTitle = "Mi blog";
 ---
@@ -12,25 +14,25 @@ const pageTitle = "Mi blog";
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <style>
-      .enlace{
+      .enlace {
         font-size: 20px;
       }
-      .rojo{
+      .rojo {
         color: red;
       }
     </style>
   </head>
   <body>
-    <a href="/">Inicio</a>
-    <a href="/about">Acerca de mi</a>
-    <a href="/blog">{pageTitle}</a>
+    <Navigation />
 
     <h1>{pageTitle}</h1>
     <p>Este blog servira como testimonio de como ire mejorando en el tiempo con AstroJS</p>
 
     <h2>Mis posts:</h2>
-    <i><a class:list={['enlace', {rojo: true}]} href="/posts/post-1">Post 1</a></i>
+    <i><a class:list={["enlace", { rojo: true }]} href="/posts/post-1">Post 1</a></i>
     <i><a href="/posts/post-2">Post 2</a></i>
     <i><a href="/posts/post-3">Post 3</a></i>
+    
+    <Footer />
   </body>
 </html>
