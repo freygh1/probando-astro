@@ -10,5 +10,5 @@ const allPosts = Object.values(import.meta.glob("./posts/*.md", { eager: true })
   <p>Este blog servira como testimonio de como ire mejorando en el tiempo con AstroJS</p>
 
   <h2>Mis posts:</h2>
-  {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.thetitle} />)}
+  {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
 </BaseLayout>

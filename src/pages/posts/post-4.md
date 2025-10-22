@@ -1,23 +1,15 @@
 ---
 layout: "../../layouts/MarkdownPostLayout.astro"
-thetitle: 'Post numero 4'
-pubDate: '18/10/2025'
-description: '4ta publicacion hablando un poco acerca de...'
+title: 'Post numero 4'
+pubDate: 12/10/2025
+description: 'Esta es la tercera publicacion que hago'
 author: 'Frey'
 image: 
   url: 'https://docs.astro.build/assets/full-logo-light.png'
   alt: 'Logo de Astro'
-tags: ['random', 'dinero facil', 'astro']
+tags: ['astro', 'blog', 'framework', 'importante', 'dinero']
 ---
 
-# Dinero  
+## Increible! Este es mi tercer post
 
-Quisiera hablarles un poquito sobre lo que es el dinero y su influencia en la vida
-
-hay diferentes tipos de dinero:
-
-- *Plata*
-
-- *Monedas*
-
-- *Oro*
+Con este tercer post, me preparo cada vez mas para lo que vendra... **Que sera?**

@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/MarkdownPostLayout.astro"
-thetitle: 'Post numero 2'
+title: 'Post numero 2'
 pubDate: 12/10/2025
 description: 'Esta es la segunda publicacion que hago'
 author: 'Frey'
@@ -10,7 +10,7 @@ image:
 tags: ['astro', 'blog', 'framework']
 ---
 
-# Segundo post
+## Segundo post
 
 Hasta ahora he conseguido algo interesante:
 

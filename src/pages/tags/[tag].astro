@@ -23,6 +23,6 @@ const filteredPosts = posts.filter((post: any) => post.frontmatter.tags?.include
 <BaseLayout pageTitle={tag}>
   <p>Posts tagged with {tag}</p>
   <ul>
-    {filteredPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.thetitle} />)}
+    {filteredPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
   </ul>
 </BaseLayout>
