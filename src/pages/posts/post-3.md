@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/MarkdownPostLayout.astro"
 thetitle: 'Post numero 3'
 pubDate: 12/10/2025
 description: 'Esta es la tercera publicacion que hago'
@@ -6,7 +7,7 @@ author: 'Frey'
 image: 
   url: 'https://docs.astro.build/assets/full-logo-light.png'
   alt: 'Logo de Astro'
-tags: ['Astro', 'Blog', 'Framework']
+tags: ['astro', 'blog', 'framework', 'importante']
 ---
 
 # Increible! Este es mi tercer post

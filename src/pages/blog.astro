@@ -1,38 +1,14 @@
 ---
-import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
 const pageTitle = "Mi blog";
+const allPosts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
+
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-    <style>
-      .enlace {
-        font-size: 20px;
-      }
-      .rojo {
-        color: red;
-      }
-    </style>
-  </head>
-  <body>
-    <Navigation />
+<BaseLayout pageTitle={pageTitle}>
+  <p>Este blog servira como testimonio de como ire mejorando en el tiempo con AstroJS</p>
 
-    <h1>{pageTitle}</h1>
-    <p>Este blog servira como testimonio de como ire mejorando en el tiempo con AstroJS</p>
-
-    <h2>Mis posts:</h2>
-    <i><a class:list={["enlace", { rojo: true }]} href="/posts/post-1">Post 1</a></i>
-    <i><a href="/posts/post-2">Post 2</a></i>
-    <i><a href="/posts/post-3">Post 3</a></i>
-    
-    <Footer />
-  </body>
-</html>
+  <h2>Mis posts:</h2>
+  {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.thetitle} />)}
+</BaseLayout>

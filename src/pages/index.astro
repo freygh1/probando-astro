@@ -1,62 +1,8 @@
 ---
-import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Inicio";
-
-import Footer from "../components/Footer.astro";
 ---
 
-<style>
-	body {
-		min-height: 200vh;
-	}
-
-	.padre {
-		width: 800px;
-		height: 800px;
-		position: relative;
-		background: #00000000;
-	}
-
-	.caja {
-		width: 200px;
-		height: 200px;
-		position: absolute;
-		display: grid;
-		place-items: center;
-	}
-
-	.color1 {
-		background: #fefefe;
-		top: 150px;
-		left: 150px;
-		z-index: -1;
-	}
-
-	.color2 {
-		background: #e66a6a;
-		z-index: 1 ;
-	}
-</style>
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Navigation />
-
-		<h1>{pageTitle}: Mi Sitio Astro</h1>
-
-		<Footer />
-
-		<div class="padre">
-			<div class="caja color1">Color 1</div>
-			<div class="caja color2">Color 2</div>
-		</div>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<h2>Mi page</h2>
+</BaseLayout>

@@ -1,17 +1,16 @@
 ---
+layout: "../../layouts/MarkdownPostLayout.astro"
 thetitle: 'Post numero 1'
-pubDate: 12/10/2025
+pubDate: '12/10/2025'
 description: 'Esta es la primera publicacion que hago'
 author: 'Frey'
 image: 
   url: 'https://docs.astro.build/assets/full-logo-light.png'
   alt: 'Logo de Astro'
-tags: ['Astro', 'Blog', 'Framework']
+tags: ['astro', 'blog', 'framework']
 ---
 
 # Mi primera publicación en el blog
-
-Publicado el: 2022-07-01
 
 ¡Bienvenido a mi _nuevo blog_ sobre el aprendizaje de Astro! Aquí, voy a compartir mi viaje de aprendizaje a medida que construyo un nuevo sitio web.
 
